@@ -4,20 +4,29 @@
 	<head>
 		<title>Lena privet!</title>
 		<style>
-			form{
+			div{
 				padding: 10px;
-			    height:200px;
+			    height:120px;
 			    width:700px;
 			    border:2px solid black;
 			}
+			div.form2 {
+				height:620px;
+			}
+			div.form3 {
+			    height: 320px;
+			}
 
 			p{
-			    width: 105px;
+			    width: 120px;
 			    margin-top: -20px;
 			    margin-left:5px;
 			    padding-left: 5px;
 			    padding-right: 5px;
 			    background:white;
+			}
+			.p2 {
+				width: 130px;	
 			}
 			input {
 				margin-bottom: 5px;
@@ -27,17 +36,78 @@
 	</head>
 
 	<body>
-			<form action="URL">
-				<p>Коротко о себе</p>
-				<label for="input1">Имя:</label> 
-				<input id="input1" type="text" size="40"><br>
-				<label for="family"> Фамилие:</label> 
-				<input type="family" size="40"><br>
-				<labe type="sex" name="">Пол: </labe>
-				<input type="radio" name="sex" value="men">Мужской 
-				<input type="radio" name="sex" value="women">Женский<br>
-				<label for="age">Возраст: </label>
-				<input id="age" type="text" size="5">  лет.<br>
-			</form>
+		<form action="to kontroller">
+		<div>
+			<p><b>Коротко о себе</b></p>
+			<label for="input1">Имя:</label> 
+			<input id="input1" type="text" size="40"><br>
+			<label for="family"> Фамилие:</label> 
+			<input type="family" size="40"><br>
+			<labe type="sex" name="">Пол: </labe>
+			<input type="radio" name="sex" value="men">Мужской 
+			<input type="radio" name="sex" value="women">Женский<br>
+			<label for="age">Возраст: </label>
+			<input id="age" type="text" size="5">  лет.<br>
+		</div>
+		<br>
+		<div  class="form2">
+			<p class="p2"><b>Подробнее о себе</b></p>
+			<input type="radio" name="sex" value="men">Молодой человек<br> 
+			<input type="radio" name="sex" value="women">Девушка<br>
+
+			<input id="date" type="text" size="40"><label for="date"> Дата рождения</label><br>
+			<input id="sem_polog" type="text" size="40"><label for="sem_polog"> Семейное положение</label><br>
+			<input id="soc_status" type="text" size="40"><label for="soc_status"> Социальный статус</label><br>
+			<input id="location" type="text" size="40"><label for="location"> Местожительство</label><br>
+			<br>
+			<b>Что вы обычно делаете на выходных</b>
+			<br>
+			<input type="checkbox" name="sleep"  size="40">Сплю<br>
+			<input type="checkbox" name="walk"  size="40">Гуляю с друзьями<br>
+			<input type="checkbox" name="fish"  size="40">Хожу на рыбалку<br>
+			<input type="checkbox" name="game"  size="40">Играю в игры<br>
+			<br>
+			<b>Расказать о форматах в книге, посвяченной HTML:</b>
+			<br>
+			<select>
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="opel">Opel</option>
+			  <option value="audi">Audi</option>
+			</select>
+			<br><br>
+			<input type="radio" name="age" value="0-10"> 0-10<br>
+		    <input type="radio" name="age" value="11-20"> 11-20<br>
+		    <input type="radio" name="age" value="21-50" checked> 21-50<br>
+		    <input type="radio" name="age" value="50"> 50+<br><br>
+		    <b>Ваши коментарии:</b><br>
+		    <textarea rows="4" cols="50">
+		    </textarea>
+		    <br>
+		    <select multiple>
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="opel">Opel</option>
+			  <option value="audi">Audi</option>
+			</select>
+		</div>
+		<br>
+		<div class="form3">
+			<p class="p2"><b>И в заключении</b></p>
+			<input type="text" size="40" placeholder="Это поле было введено для вас"><br>
+			<label for="email"><b>Email:</b></label><br> 
+			<input id="email" type="text" size="40"><br>
+			<b>Хотите подписаться на самую модну рассылку спама?</b><br>
+			<em>Выберите категории</em><br><br>
+			<input type="checkbox" name="eqipment">Оборудование<br>
+			<input type="checkbox" name="coock">Как приготовить обеды<br>
+			<input type="checkbox" name="work">Заработай миллион за два дня!<br><br>
+			<b>На сколько сложная задача:</b><br><br>
+			<input type="radio" name="task" value="0" checked> Совсем нет<br>
+		    <input type="radio" name="task" value="1"> Так себе<br>
+		    <input type="radio" name="task" value="2"> Еле справились<br>
+		</div><br>
+		<input type="submit" value="Отправить">
+		</form>
 	</body>
 </html>
